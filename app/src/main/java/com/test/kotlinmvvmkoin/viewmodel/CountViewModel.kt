@@ -1,6 +1,5 @@
 package com.test.kotlinmvvmkoin.viewmodel
 
-import android.util.Log
 import androidx.databinding.ObservableField
 import androidx.lifecycle.ViewModel
 import com.test.kotlinmvvmkoin.dao.CounterDAO
@@ -30,10 +29,5 @@ class CountViewModel(private val counterDAO: CounterDAO): ViewModel() {
             counter.set(count.counter.toString())
             counterDAO.update(count)
         }
-    }
-
-    private fun onError(throwable: Throwable) {
-        throwable.printStackTrace()
-        Log.e("increment", throwable.message)
     }
 }

@@ -14,8 +14,8 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        val mad: ActivityMainBinding = DataBindingUtil.setContentView(this, R.layout.activity_main)
-        mad.viewModel = viewModel
+        val amb: ActivityMainBinding = DataBindingUtil.setContentView(this, R.layout.activity_main)
+        amb.viewModel = viewModel
 
         button.setOnClickListener {
             viewModel.increment()
